@@ -1,0 +1,3 @@
+This Memory game is coded so that two users can play against each other with the player with the most matches at the end of the game appearing as the winner of the game with a cool confetti effect. There is an option for the user to choose the maximum amount of adjustments in the game according to his wish in order to increase the level of difficulty and the length of the game. You can also see the time record when a game ends, the time is saved by local storage.
+
+built with html, css, js.
