@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: url(memory.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    direction: ltr;
+    padding-bottom: 200px;
+    
+}
+
+* {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 16px;
+}
+
+.frame {
+    text-align: center;
+}
+
+h2 {
+  text-align: center;
+    color: white;
+    margin: 16px;
+}
+h2.active {
+    color: #3bbed5;
+
+}
+
+h2.winner {
+    color: blue;
+}
+
+h2.loser {
+    color: red;
+}
+
+h2.tie {
+    color: orange;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+button:hover {
+    background-color: #a4d967;
+}
+
+.board {
+    display: inline-grid;
+    overflow: hidden;
+    background-color:#181818;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 12px;
+    direction: ltr;
+}
+
+.board div {
+    width: 90px;
+    height: 90px;
+    background-color: #d53b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: inset 0px 0px 8px black;
+}
+
+.board div span {
+    display: none;
+    pointer-events: none;
+}
+
+.board div.showing {
+    background: #2cba00;
+    transform: matrix3d(1, 0, 4, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.board div.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.board div.showing span {
+    display: initial;
+}
+
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+ .winner {
+    position: relative;
+    top: 330px;
+    left: 475px;
+    animation: zoom-in 2s;
+ }
+
+p {
+    text-align: center;
+    color: white;
+}
+
+p .margin {
+    margin: 0 12px;
+}
+
+.cheat {
+    filter: brightness(0.7);
+}
+.player-name {
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#boardSizeChoose{
+        border: none;
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+  
+    color: inherit;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#playersContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

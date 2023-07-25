@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Memory Game</h1>
+    <div id="playersContainer">
+        <div>
+            <h2 class="active"><input type="text" id="player1-name" class="player-name"
+                    placeholder="Enter Player 1 Name"></h2>
+            <p> Number of matches:<b class="pairsCounter"> 0</b></p>
+        </div>
+
+        <div>
+            <h2><input type="text" id="player2-name" class="player-name" placeholder="Enter Player 2 Name"></h2>
+            <p>Number of matches:<b class="pairsCounter"> 0</b></p>
+        </div>
+    </div>
+
+    <div id="boardSizeChoose">
+        <label for="board-size" style=" font-weight:bold; color: white;">Please select the desired number of
+            adjustments:</label>
+        <input type="number" id="board-size" min="4" max="20"><br><br>
+        <button id="start-button" onclick="startGame()">Start</button>
+    </div>
+    <p style="font-weight: bold;">Number of tries: <b class="counter">0</b> <span class="margin"></span> Timer: <b
+            class="timer">00:00</b></p>
+    <p style="font-weight: bold;">Best Time: <span id="best-time">--:--</span></p>
+    <div class="frame">
+        <div class="board"></div><br><br><br>
+        <button id="restart-button" onclick="restartGame()">Restart Game</button>
+    </div>
+
+</body>
+
+</html>
