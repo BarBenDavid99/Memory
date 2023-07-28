@@ -36,7 +36,7 @@ label {
 
 h2 {
   text-align: center;
-    color: white;
+    color: whitesmoke;
     margin: 16px;
 }
 h2.active {
@@ -45,11 +45,19 @@ h2.active {
 }
 
 h2.winner {
-    color: blue;
+    color: #d53b3b;
+   
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    
+    animation: zoom-in 2s;
+    font-size: 70px;
+ 
 }
 
 h2.loser {
-    color: #d53b3b;
+    color: whitesmoke;
 }
 
 h2.tie {
@@ -91,7 +99,7 @@ button:hover {
     align-items: center;
     font-size: 35px;
     font-weight: bold;
-    color: white;
+    color: whitesmoke;
     border-radius: 12px;
     transition: 0.3s;
     box-shadow: inset 0px 0px 8px black;
@@ -103,7 +111,7 @@ button:hover {
 }
 
 .board div.showing {
-    background: white;
+    background: whitesmoke;
     transform: matrix3d(1, 0, 4, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1);
     color: #d53b3b;
 }
@@ -128,25 +136,20 @@ button:hover {
     }
 }
 
- .winner {
-    position: relative;
-    top: 330px;
-    left: 475px;
-    animation: zoom-in 2s;
- }
+ 
 
 p {
     text-align: center;
-    color: white;
+    color: whitesmoke;
 }
 
 p .margin {
     margin: 0 12px;
 }
 
-.cheat {
+/* .cheat {
     filter: brightness(0.7);
-}
+} */
 .player-name {
     border: none;
     background-color: transparent;
